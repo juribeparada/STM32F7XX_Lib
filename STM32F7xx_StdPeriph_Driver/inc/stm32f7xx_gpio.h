@@ -281,7 +281,6 @@ typedef struct
 #define GPIO_AF7_USART3        ((uint8_t)0x07)  /* USART3 Alternate Function mapping     */
 #define GPIO_AF_USART3         GPIO_AF7_USART3
 #define GPIO_AF7_UART5         ((uint8_t)0x07)  /* UART5 Alternate Function mapping      */
-#define GPIO_AF_UART5          GPIO_AF7_UART5
 #define GPIO_AF7_SPDIFRX       ((uint8_t)0x07)  /* SPDIF-RX Alternate Function mapping   */
 #define GPIO_AF7_SPI2          ((uint8_t)0x07)  /* SPI2 Alternate Function mapping       */
 #define GPIO_AF7_SPI3          ((uint8_t)0x07)  /* SPI3 Alternate Function mapping       */
@@ -291,6 +290,7 @@ typedef struct
   */ 
 #define GPIO_AF8_UART4         ((uint8_t)0x08)  /* UART4 Alternate Function mapping  */
 #define GPIO_AF8_UART5         ((uint8_t)0x08)  /* UART5 Alternate Function mapping  */
+#define GPIO_AF_UART5          GPIO_AF8_UART5
 #define GPIO_AF8_USART6        ((uint8_t)0x08)  /* USART6 Alternate Function mapping */
 #define GPIO_AF8_UART7         ((uint8_t)0x08)  /* UART7 Alternate Function mapping  */
 #define GPIO_AF8_UART8         ((uint8_t)0x08)  /* UART8 Alternate Function mapping  */
