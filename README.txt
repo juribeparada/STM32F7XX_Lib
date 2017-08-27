@@ -4,7 +4,7 @@ This is the STM32F7XX_Lib directory structure with just the needed code for MMDV
 Copy this STM32F7XX_Lib directory inside the MMDVM source code project. You have to
 conserve the STM32F7XX_Lib folder name: MMDVM/STM32F7XX_Lib
 
-The source of CSIM library and some include files is from STM32Cube_FW_F7_V1.7.0:
+The source of CMSIS library and some include files is from STM32Cube_FW_F7_V1.7.0:
 http://www.st.com/content/st_com/en/products/embedded-software/mcus-embedded-software/stm32-embedded-software/stm32cube-embedded-software/stm32cubef7.html
 
 The adaptation to STM32F7 Standard Peripheral Library (STM32F7XX_Lib/STM32F7xx_StdPeriph_Driver) is from:
