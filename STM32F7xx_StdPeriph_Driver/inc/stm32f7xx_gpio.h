@@ -20,6 +20,7 @@
 
 /* Exported types ------------------------------------------------------------*/
 
+#if defined(STM32F767xx)
 #define IS_GPIO_ALL_PERIPH(PERIPH) (((PERIPH) == GPIOA) || \
                                     ((PERIPH) == GPIOB) || \
                                     ((PERIPH) == GPIOC) || \
@@ -31,6 +32,17 @@
                                     ((PERIPH) == GPIOI) || \
                                     ((PERIPH) == GPIOJ) || \
                                     ((PERIPH) == GPIOK))
+#elif defined(STM32F722xx)
+#define IS_GPIO_ALL_PERIPH(PERIPH) (((PERIPH) == GPIOA) || \
+                                    ((PERIPH) == GPIOB) || \
+                                    ((PERIPH) == GPIOC) || \
+                                    ((PERIPH) == GPIOD) || \
+                                    ((PERIPH) == GPIOE) || \
+                                    ((PERIPH) == GPIOF) || \
+                                    ((PERIPH) == GPIOG) || \
+                                    ((PERIPH) == GPIOH) || \
+                                    ((PERIPH) == GPIOI))
+#endif
 
 /** 
   * @brief  GPIO Configuration Mode enumeration 
@@ -276,6 +288,7 @@ typedef struct
   * @brief   AF 7 selection  
   */ 
 #define GPIO_AF7_USART1        ((uint8_t)0x07)  /* USART1 Alternate Function mapping     */
+#define GPIO_AF_USART1         GPIO_AF7_USART1
 #define GPIO_AF7_USART2        ((uint8_t)0x07)  /* USART2 Alternate Function mapping     */
 #define GPIO_AF_USART2         GPIO_AF7_USART2
 #define GPIO_AF7_USART3        ((uint8_t)0x07)  /* USART3 Alternate Function mapping     */
@@ -385,7 +398,7 @@ typedef struct
                           ((AF) == GPIO_AF12_OTG_HS_FS) || ((AF) == GPIO_AF12_SDMMC1)     || \
                           ((AF) == GPIO_AF12_FMC)       || ((AF) == GPIO_AF15_EVENTOUT)  || \
                           ((AF) == GPIO_AF13_DCMI)      || ((AF) == GPIO_AF14_LTDC))
-#elif defined(STM32F745xx)
+#elif defined(STM32F745xx) || defined(STM32F722xx)
 #define IS_GPIO_AF(AF)   (((AF) == GPIO_AF0_RTC_50Hz)   || ((AF) == GPIO_AF1_TIM1)        || \
                           ((AF) == GPIO_AF0_SWJ)        || ((AF) == GPIO_AF0_TRACE)      || \
                           ((AF) == GPIO_AF0_MCO)       || ((AF) == GPIO_AF1_TIM2)       || \

@@ -415,9 +415,11 @@ typedef struct
 #define RCC_AHB1Periph_GPIOF             ((uint32_t)RCC_AHB1ENR_GPIOFEN)
 #define RCC_AHB1Periph_GPIOG             ((uint32_t)RCC_AHB1ENR_GPIOGEN)
 #define RCC_AHB1Periph_GPIOH             ((uint32_t)RCC_AHB1ENR_GPIOHEN)
-#define RCC_AHB1Periph_GPIOI             ((uint32_t)RCC_AHB1ENR_GPIOIEN) 
+#define RCC_AHB1Periph_GPIOI             ((uint32_t)RCC_AHB1ENR_GPIOIEN)
+#if defined(STM32F767xx)
 #define RCC_AHB1Periph_GPIOJ             ((uint32_t)RCC_AHB1ENR_GPIOJEN)
 #define RCC_AHB1Periph_GPIOK             ((uint32_t)RCC_AHB1ENR_GPIOKEN)
+#endif
 #define RCC_AHB1Periph_CRC               ((uint32_t)RCC_AHB1ENR_CRCEN)
 #define RCC_AHB1Periph_BKPSRAM           ((uint32_t)RCC_AHB1ENR_BKPSRAMEN)
 #define RCC_AHB1Periph_DTCMRAM           ((uint32_t)RCC_AHB1ENR_DTCMRAMEN)
